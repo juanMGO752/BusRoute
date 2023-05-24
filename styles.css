@@ -2,7 +2,6 @@
     outline: 1px solid blue;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
 
 }
 
@@ -138,7 +137,9 @@ li {
     padding: 40px;
     overflow: hidden;
     width: 30%;
-    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
 }
 
 .photos img{
@@ -157,7 +158,6 @@ li {
 }
 
 .coment-photo{
-    
     text-align: center;
     font-size: 1.5rem;
 }
