@@ -101,6 +101,26 @@ li {
 
 }
 
+.map{
+    border: none;
+    width: 100%;
+    height: 20rem;
+}
+
+.wrapper-main{
+    grid-column-start: 2;
+    grid-column-end: 3;
+    background-color: white;
+    height: 100%;
+}
+
+.wrapper-main-message{
+    font-size: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 .wrapper-main-photos{
     padding: 5rem 0 ;
     gap: 5rem;
@@ -109,27 +129,17 @@ li {
 
 }
 
-.map{
-    border: none;
-    width: 100%;
-    height: 20rem;
-}
-
-.div1{
+.photos{
+    display: inline-block;
+    text-align: center;
+    width: 30%;
     width: 10rem;
     border: 2px solid #000000;
     height: 10rem;
     border-radius: 30px;
 }
 
-
-.box1 {
-    grid-column-start: 2;
-    grid-column-end: 3;
-    background-color: white;
-    height: 100%;
-}
-
+.photo-security{}
 /* RESPONSIVE NAVBAR MENU STARTS */
 
 /* CHECKBOX HACK */
