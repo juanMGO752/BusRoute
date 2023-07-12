@@ -2,11 +2,11 @@
     outline: 1px solid blue;
     margin: 0;
     padding: 0;
-
+    box-sizing: border-box;
 }
 
 body {
-    background-image: url(imagenes/bus.jpg);
+    /* background-image: url(imagenes/bus.jpg); */
     background-repeat: repeat;
     background-size: 150px;
     font-family: cursive;
@@ -19,14 +19,17 @@ a {
 li {
     list-style: none;
 }
-
+.header{
+    background-color: teal;
+}
 .navbar {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 20px;
-    background-color: teal;
+    padding: 0 2.25rem 0 2.25rem ;
+
     color: #fff;
+    width: 100%;
 }
 
 .nav-links a {
@@ -95,21 +98,27 @@ li {
 
 /* informacion main */
 
-.wrapper {
-    display: grid;
-    grid-template-columns: 1fr 5fr 1fr;
-    grid-auto-rows: minmax(0, auto);
+.container{
+    width: 87%;
+    padding: 0 15px;
+    margin: 0 auto;
+}
+main{
+
+    
 
 }
 
-.wrapper-main{
-    grid-column-start: 2;
-    grid-column-end: 3;
+.container-main{
     background-color: white;
-    height: 100%;
+    display: flex;
+    justify-content: center;
+    background-color: white;
+    flex-direction: column;
+
 }
 
-.wrapper-main-message{
+.container-main-message{
     padding: 2rem 0;
     gap: 2rem;
     font-size: 2rem;
@@ -118,35 +127,37 @@ li {
     text-align: center;
 }
 
-.wrapper-main-photos{
+.container-main-photos{
     padding: 5rem 0 ;
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
 
 }
 
-.wrapper-main-photos div{
+.target-photos{
     padding: 20px;
     overflow: hidden;
-    width: 30%;
+    width: 300px;
     display: flex;
     flex-direction: column;
     gap: 3rem;
     align-items: center;
+    box-sizing: border-box;
 }
 
-.photos img{
+.target-img{
     display: inline-block;
     justify-content: center;
-    max-width: 15rem;
+    width: 100%;
     border: 2px solid #000000;
-    height: 15rem;
+    height: 300px;
     border-radius: 30px;
     transition: transform 0.4s;
 
 }
 
-.photos img:hover{
+.target-img:hover{
     transform: scale(1.1);
         
 }
@@ -156,6 +167,13 @@ li {
     font-size: 1.5rem;
 }
 
+.mapa{
+
+}
+.mapa-img{
+    width: 100%;
+    height: 500px;
+}
 /* footer */
 
 footer{
@@ -171,6 +189,7 @@ footer{
     box-sizing: border-box;
     border-radius: 32px;
     text-align: center;
+    margin-right: 2rem ;
 }
 
 
@@ -179,19 +198,19 @@ footer{
 
 /* CHECKBOX HACK */
 
-/* input[type=checkbox] {
+input[type=checkbox] {
     display: none;
-} */
+}
 
 /* HAMBURGER MENU */
-/* .hamburger {
+.hamburger {
     display: none;
     font-size: 24px;
     user-select: none;
-} */
+}
 
 /* APPLYING MEDIA QUERIES */
-/* @media (max-width: 768px) {
+@media (max-width: 768px) {
     .menu {
         display: none;
         position: absolute;
@@ -229,4 +248,4 @@ footer{
     .dropdown li:hover {
         background-color: #4c9e9e;
     }
-} */
+}
