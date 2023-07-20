@@ -1,0 +1,100 @@
+<style>
+    div {
+        overflow: hidden;
+    }
+
+    p {
+        animation-duration: 3s;
+        animation-name: slidein;
+        animation-iteration-count: 1;
+        /* animation-direction: alternate; */
+    }
+
+    /* .slidein {
+        animation-duration: 3s;
+        animation-name: slidein;
+        animation-iteration-count: 3;
+        animation-direction: alternate;
+    } */
+
+    @keyframes slidein {
+        from {
+            margin-left: 100%;
+            width: 100%;
+        }
+
+        to {
+            margin-left: 0%;
+            width: 100%;
+        }
+
+        /* 75% {
+            font-size: 400%;
+            margin-left: 80%;
+            width: 500%;
+        } */
+    }
+
+    /* @keyframes slidein {
+        from {
+            margin-left: 100%;
+            width: 300%
+        }
+
+        to {
+            margin-left: 0%;
+            width: 100%;
+        }
+    } */
+</style>
+
+<div>
+    <p>
+        En el tercer caso, hay tres animaciones especificadas, pero solo dos duraciones y número de iteraciones. En los
+        casos en donde no hay valores suficientes para dar un valor separado a cada animación, los valores se repiten de
+        inicio a fin. Así por ejemplo, fadeInOut obtiene una duración de 2.5s y moveLeft300px obtiene una duración de
+        5s. Ahora tenemos asignados todos los valores de duracion disponibles, así que empezamos desde el inicio de
+        nuevo - por lo tanto bounce tiene una duración de 2.5s. El número de iteraciones (y cualquier otra propiedad que
+        especifiques) será asignados de la misma forma.
+    </p>
+</div>
+
+<!-- <div>
+    <h1 id="watchme">Watch me move</h1>
+<p>
+  This example shows how to use CSS animations to make <code>H1</code>
+  elements move across the page.</p>
+<p>
+  In addition, we output some text each time an animation event fires,
+  so you can see them in action.
+</p>
+<ul id="output">
+</ul>
+</div>
+
+<script>
+
+var e = document.getElementById("watchme");
+e.addEventListener("animationstart", listener, false);
+e.addEventListener("animationend", listener, false);
+e.addEventListener("animationiteration", listener, false);
+
+e.className = "slidein";
+
+function listener(e) {
+  var l = document.createElement("li");
+  switch(e.type) {
+    case "animationstart":
+      l.innerHTML = "Iniciado: tiempo transcurrido " + e.elapsedTime;
+      break;
+    case "animationend":
+      l.innerHTML = "Finalizado: tiempo transcurrido " + e.elapsedTime;
+      break;
+    case "animationiteration":
+      l.innerHTML = "Nueva iteración comenzó a los " + e.elapsedTime;
+      break;
+  }
+  document.getElementById("output").appendChild(l);
+}
+
+</script> -->
