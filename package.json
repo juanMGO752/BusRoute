@@ -1,0 +1,38 @@
+{
+  "name": "busroute",
+  "version": "1.0.0",
+  "description": "Proyecto de emprendimiento para la Universidad de manizales, requisito para proyecto de grado. Pagina hecha en el front-end con html, css y javascript y en el backend con node.js y mongoDB",
+  "main": "index.js",
+  "scripts": {
+    "dev": "cross-env NODE_ENV=development nodemon backend/index.js --ignore frontend",
+    "start": "cross-env NODE_ENV=production node backend/index.js",
+    "build": "cross-env NODE_ENV=production webpack",
+    "server:dev": "cross-env NODE_ENV=development webpack-dev-server"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "cross-env": "^7.0.3",
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "fs-extra": "^11.1.1",
+    "mongoose": "^7.4.3",
+    "morgan": "^1.10.0",
+    "multer": "^1.4.5-lts.1"
+  },
+  "devDependencies": {
+    "copy-webpack-plugin": "^11.0.0",
+    "css-loader": "^6.8.1",
+    "file-loader": "^6.2.0",
+    "html-webpack-plugin": "^5.5.3",
+    "mini-css-extract-plugin": "^2.7.6",
+    "nodemon": "^3.0.1",
+    "style-loader": "^3.3.3",
+    "timeago.js": "^4.0.2",
+    "webpack": "^5.88.2",
+    "webpack-cli": "^5.1.4",
+    "webpack-dev-server": "^4.15.1"
+  }
+}

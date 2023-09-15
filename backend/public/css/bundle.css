@@ -1,0 +1,553 @@
+* {
+    /* outline: 1px solid blue; */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url(../8376f1685eb49b143991.jpg);
+    background-repeat: repeat;
+    background-size: 150px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1rem;
+    line-height: 1.42857143;
+}
+
+a {
+    text-decoration: none;
+}
+
+li {
+    list-style: none;
+}
+
+h1 {
+    font-size: 2.2rem;
+}
+
+h2 {
+    font-size: 1.75rem;
+}
+
+p {
+    font-size: 16px;
+}
+
+.header {
+    background-color: #008080;
+    height: 8rem;
+    position: sticky;
+    display: flex;
+    align-items: center;
+    top: 0px;
+    animation: adjust-header linear both;
+    animation-timeline: scroll();
+    animation-range: 150px 400px;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 2.25rem 0 2.25rem;
+    color: #fff;
+    width: 100%;
+}
+
+.nav-links a {
+    color: #fff;
+}
+
+/* LOGO */
+.logo {}
+
+.imagenLogo {
+    width: 90px;
+    border-radius: 25px;
+
+}
+
+/* NAVBAR MENU */
+.menu {
+    display: flex;
+    gap: 1em;
+    font-size: 18px;
+}
+
+.menu li:hover {
+    background-color: #4c9e9e;
+    border-radius: 5px;
+    transition: 0.3s ease;
+}
+
+.menu li {
+    padding: 5px 14px;
+}
+
+/* DROPDOWN MENU */
+.services {
+    position: relative;
+}
+
+.dropdown {
+    background-color: rgb(1, 139, 139);
+    padding: 1em 0;
+    position: absolute;
+    /*WITH RESPECT TO PARENT*/
+    display: none;
+    border-radius: 8px;
+    top: 35px;
+}
+
+.dropdown li+li {
+    margin-top: 10px;
+}
+
+.dropdown li {
+    padding: 0.5em 1em;
+    width: 8em;
+    text-align: center;
+}
+
+.dropdown li:hover {
+    background-color: #4c9e9e;
+}
+
+.services:hover .dropdown {
+    display: block;
+}
+
+/* informacion main */
+
+.container {
+    /* box-sizing: border-box;
+    max-width: 1720px;
+    padding: 0 20px;
+    margin: 0 auto; */
+    padding-right: 2.25%;
+    padding-left: 2.25%;
+}
+
+.main {
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    background-color: white;
+    flex-direction: column;
+
+}
+
+.container_main_message {
+    /* background-image: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.5)), url(imagenes/Banner.jpg);
+    height: 100vh;
+    width: 100%;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative; */
+    gap: 3rem;
+    font-size: 1rem;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    height: 90vh;
+    align-items: center;
+
+}
+
+.main_message {
+    align-self: center;
+
+}
+
+.imagen_main_message {
+    width: 400px;
+    height: 700px;
+    border-radius: 20px 30px 40px 50px;
+    box-shadow: 2px 5px 13px 0px #DFDFDF;
+
+}
+
+.logos_empresas{
+padding: 3rem;
+}
+
+.lista_logos_empresas{
+display: flex;
+justify-content: space-around;
+align-items: center;
+flex-wrap: wrap;
+}
+
+.item_logos_empresas{
+    
+}
+
+.item_logo_empresa{
+    width: 250px;
+    box-shadow: 2px 5px 13px 0px #DFDFDF;
+
+}
+
+.container-main-photos {
+    padding: 3rem 0;
+    background-color: #fafafa;
+}
+
+.titulo-centrado {
+    text-align: center;
+    padding: 2rem 0;
+}
+
+.container_photos {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.target-photos {
+    padding: 20px;
+    overflow: hidden;
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+.target-img {
+    display: inline-block;
+    justify-content: center;
+    width: 100%;
+    border: 2px solid #000000;
+    height: 300px;
+    border-radius: 30px;
+    transition: transform 0.4s;
+
+}
+
+.target-img:hover {
+    transform: scale(1.1);
+
+}
+
+.coment-photo {
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+.mapa {
+    width: 100%;
+}
+
+.mapa-img {
+    height: 500px;
+    width: 100%;
+}
+
+/* Integrantes */
+.integrantes {
+    margin: 1.25rem;
+}
+
+.integrantes-titulo {
+    font-size: 1.799rem;
+    text-align: center;
+    margin: 2rem 0;
+}
+
+.integrantes-lista {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+
+}
+
+.integrantes-item {
+    padding: 1.15rem;
+    margin: 1.25rem 0;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.integrantes-img {
+    height: 300px;
+    width: 300px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 100%;
+    box-shadow: 0 2px 10px 5px #DFDFDF;
+}
+
+.integrantes-img-manuela {
+    background-image: url(../725a917f406424b0f3b9.jpg);
+}
+
+.integrantes-img-julian {
+    background-image: url(../98552e257d3b93582678.jpg);
+
+}
+
+.integrantes-img-juan {
+    background-image: url(../523cabb71eb1eb39efcf.png);
+}
+
+.integrantes-item-comentario {
+    margin: 1.25rem 0 0;
+    font-size: 1.5rem;
+    align-items: center;
+}
+
+/* footer */
+
+footer {
+    background-color: #F5DCB6;
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.imgfooter {
+    width: 5rem;
+    box-sizing: border-box;
+    border-radius: 32px;
+    text-align: center;
+    margin-right: 2rem;
+}
+
+/* Sbre Nosotros */
+
+.mensaje-sobre-nosotros {
+    padding: 2rem 0;
+}
+
+.container-mensaje {
+    display: flex;
+    gap: 5rem;
+}
+
+.sobre-nosotros-img {
+    width: 400px;
+    border-radius: 30px 0px 100px 0px;
+}
+
+.texto-titulo {
+    margin: 2.50rem 0 1.25rem 1.25rem;
+}
+
+.texto-cuerpo {
+    margin: 0 0 1.25rem 2.50rem;
+    max-width: 80ch;
+    line-height: 30px;
+}
+
+.diferenciales {}
+
+.diferenciales-lista {}
+
+.diferenciales-item {
+    box-sizing: border-box;
+    padding: 2rem 0 2rem 9rem;
+    background-repeat: no-repeat;
+    background-position: top 1.25rem;
+    background-size: 10rem;
+    overflow: hidden;
+    text-align: justify;
+
+}
+
+.mision-img {
+    background-image: url(../7db42cc8a36f0b1cfdb5.png);
+    background-size: 150px;
+}
+
+.vision-img {
+    background-image: url(../1c5b0ff62f6bc2d0b190.png);
+    background-size: 150px;
+}
+
+.valores-img {
+    background-image: url(../8235a7859bd7640d14a1.png);
+    background-size: 150px;
+}
+
+/* EMPRESAS */
+
+.empresas {}
+
+.titulo_container_empresa {
+    text-align: center;
+    padding: 2rem 0;
+
+}
+
+.cuerpo_container_empresa {
+    padding: 2rem 0;
+}
+
+.container_descripion_empresas {
+    display: flex;
+    gap: 32px;
+
+}
+
+.mensaje_descripcion_empresas {
+    max-width: 80ch;
+    word-wrap: balance;
+}
+
+.imagen_descripcion_empresas {
+    width: 40%;
+}
+
+.container_rutas_empresa {}
+
+.lista_rutas {}
+
+.ruta {
+    display: block;
+}
+
+.item_nombre_ruta {}
+
+.item_informacion {
+    display: none;
+
+}
+
+input[type=checkbox]:checked~.item_informacion {
+    display: flex;
+}
+
+.item_informacion_ruta {
+
+    width: 600px;
+    height: 400px;
+    padding: 2rem;
+}
+
+.lista_paso_ruta {
+    overflow-y: scroll;
+    height: 100%;
+}
+
+.paso_ruta {
+    padding: 1rem;
+}
+
+.item_ruta_mapa {
+    width: 600px;
+    height: 400px;
+}
+
+/* ANIMACIONES */
+
+/* Animacion de las pagina sobre nosotros */
+
+.animacion-left {
+    animation-duration: 3s;
+    animation-name: slidein;
+    animation-iteration-count: 1;
+}
+
+@keyframes slidein {
+    from {
+        margin-left: 100%;
+        width: 100%;
+    }
+
+    to {
+        margin-left: 2.50rem;
+        width: 100%;
+    }
+
+}
+
+@keyframes adjust-header {
+    to {
+        background: hsla(0, 0%, 0%, 0.3);
+        backdrop-filter: blur(10px);
+        font-size: 10px;
+        height: 5rem;
+    }
+}
+
+/* RESPONSIVE NAVBAR MENU STARTS */
+
+/* CHECKBOX HACK */
+
+input[type=checkbox] {
+    display: none;
+}
+
+/* HAMBURGER MENU */
+.hamburger {
+    display: none;
+    font-size: 24px;
+    user-select: none;
+}
+
+/* APPLYING MEDIA QUERIES */
+@media (max-width: 1200px) {
+
+}
+@media (max-width: 768px) {
+    .menu {
+        display: none;
+        position: absolute;
+        background-color: teal;
+        right: 0;
+        left: 0;
+        text-align: center;
+        padding: 16px 0;
+    }
+
+    .menu li:hover {
+        display: inline-block;
+        background-color: #4c9e9e;
+        transition: 0.3s ease;
+    }
+
+    .menu li+li {
+        margin-top: 12px;
+    }
+
+    input[type=checkbox]:checked~.menu {
+        display: block;
+    }
+
+    .hamburger {
+        display: block;
+    }
+
+    .dropdown {
+        left: 50%;
+        top: 30px;
+        transform: translateX(35%);
+    }
+
+    .dropdown li:hover {
+        background-color: #4c9e9e;
+    }
+
+    .mapa-img {
+        height: 300px;
+    }
+}
+
+@media screen and (min-width: 1280px) {
+    .container {
+        padding-left: calc((100% - 1224px)/2);
+        padding-right: calc((100% - 1224px)/2);
+    }
+
+
+}
+
+/*# sourceMappingURL=bundle.css.map*/
