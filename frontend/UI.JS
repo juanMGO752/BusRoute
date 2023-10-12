@@ -85,10 +85,12 @@ class UI {
     }
 
     clearSuggestions(){
+        let mapRoutes = document.getElementById("route-maps");
+        mapRoutes.innerHTML=``;
         let sugerencias = document.getElementById("routes-end");
-        sugerencias.innerHTML = ``
+        sugerencias.innerHTML = ``;
         sugerencias = document.getElementById("routes-start");
-        sugerencias.innerHTML = ``
+        sugerencias.innerHTML = ``;
     }
 
 

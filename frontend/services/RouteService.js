@@ -1,7 +1,7 @@
 
 class RouteService {
     constructor(){
-        this.URI = 'http://localhost:3000/api/routes'
+        this.URI = '/api/routes'
     }
 
     async getRoute(){
