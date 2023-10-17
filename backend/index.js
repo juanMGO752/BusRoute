@@ -19,7 +19,7 @@ require('./database');
 
 // settings
 
-app.set('port',3000);
+app.set('port' ,process.env.PORT || 3000);
 
 // Middlewares
 app.use(morgan('dev'));
@@ -47,7 +47,7 @@ app.use('/api/routes',require('./routes/routes.js')); //api creada con una url
 
 // Static files
 // en la carpeta "publi" es donde deben de ir todo lo que se puede mostar como el html, css, javascript o fotos
-app.use(express.static(path.join(__dirname,'/public')));
+app.use(express.static(path.join(__dirname,'public')));
 
 
 // Start the server
