@@ -5,7 +5,6 @@ const Route = require('../models/Route')
 
 router.get('/', async (req, res) => {
     const routes = await Route.find(); //evento asyncrono, que guarda en una constante
-    console.log(routes)
     res.json(routes);
 });
 
