@@ -305,10 +305,6 @@ flex-wrap: wrap;
     background-image: url(../assets/manuela.jpg);
 }
 
-.integrantes-img-julian {
-    background-image: url(../assets/Julian.jpg);
-
-}
 
 .integrantes-img-juan {
     background-image: url(../assets/juan.png);
@@ -526,11 +522,12 @@ top: 109px;
 
 .route-buttons-container{
     display: flex;
-    ;
-    justify-content: space-evenly;
+    justify-content: normal;
     background-color: #fafafa;
     padding: 3rem;
     box-sizing: border-box;
+    flex-wrap: wrap;
+    gap: 1rem;
 }
 .container-button{
     background-color: #008080;

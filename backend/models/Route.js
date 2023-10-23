@@ -7,6 +7,8 @@ const RouteSchema = new Schema({
     collectionKeyPoints:{ type: Array, required: true },
     // imagePath: { type: String, required: true},
     created_at: { type: Date, default: Date.now},
+},{
+    collection: 'routes',
 });
 
 module.exports = model('Route',RouteSchema);

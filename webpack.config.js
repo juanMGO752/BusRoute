@@ -49,8 +49,8 @@ module.exports = {
             }
         }),
         new HtmlWebPackPlugin({
-            filename:"empresas.html",
-            template: './frontend/empresas.html',
+            filename:"tu_ruta.html",
+            template: './frontend/tu_ruta.html',
             minify:{
                 collapseWhitespace: true, //quita todos los espacios en blanco que tenga el html
                 removeComments: true, //remueve comentarios

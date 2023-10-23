@@ -526,11 +526,12 @@ top: 109px;
 
 .route-buttons-container{
     display: flex;
-    ;
-    justify-content: space-evenly;
+    justify-content: normal;
     background-color: #fafafa;
     padding: 3rem;
     box-sizing: border-box;
+    flex-wrap: wrap;
+    gap: 1rem;
 }
 .container-button{
     background-color: #008080;
