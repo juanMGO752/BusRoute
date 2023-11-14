@@ -23,7 +23,7 @@ router.delete('/:id', async (req, res) =>{
 
     await Route.findByIdAndDelete(req.params.id);
 
-    res.json({message:'route deleted}'});
+    res.json({message:'route deleted'});
 })
 
 

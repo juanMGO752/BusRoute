@@ -9,7 +9,8 @@ class UI {
         const despliegueRutas = document.getElementById('despliegue-rutas');
         const itemsSearcherStart = document.getElementById('input-autocom-start');
         const itemsSearcherEnd = document.getElementById('input-autocom-end');
-
+        const routeMapsContainer = document.getElementById('route-maps'); //** */
+        routeMapsContainer.innerHTML = '';//** */
         despliegueRutas.innerHTML = ''
 
         const containerNewButtons = document.createElement('div');
@@ -30,13 +31,40 @@ class UI {
         this.clearRouterForm();
     }
 
+    async renderAllRoutes() {
+        const routes = await routeService.getRoute();
+        const despliegueRutas = document.getElementById('despliegue-rutas');
+        const routeMapsContainer = document.getElementById('route-maps'); //** */
+        routeMapsContainer.innerHTML = '';//** */
+        despliegueRutas.innerHTML = ''
+
+        const containerNewButtons = document.createElement('div');
+        containerNewButtons.className = 'route-buttons-container container';
+
+        routes.forEach(route => {
+            if (route.tittleRoute != "ListToRouteStart") {
+                const newButton = document.createElement('div');
+                newButton.className = 'container-button'
+                newButton.innerHTML = `
+                    <a class="view" _id="${route._id}">${route.company} (${route.tittleRoute})</a>
+                    `
+                containerNewButtons.appendChild(newButton);
+            };
+
+        });
+        despliegueRutas.appendChild(containerNewButtons);
+        this.clearRouterForm();
+        
+    }
+
     async renderRoutesMaps(idMap) {
         const routes = await routeService.getRoute();
         const routeMapsContainer = document.getElementById('route-maps'); //** */
+        routeMapsContainer.innerHTML = '';//** */
 
         const objMap = routes.find((route) =>route._id === idMap);
 
-        routeMapsContainer.innerHTML = '';//** */
+        
         const containerTitleRoute = document.createElement('div');
         const containerMap = document.createElement('div');//** */
         const lista = document.createElement('ul');//** */
@@ -66,9 +94,8 @@ class UI {
         containerMap.appendChild(imgMap);
 
         
-        
-        
         routeMapsContainer.appendChild(containerMap);//** */
+        return(false);
     }
 
     // funcion del autocompletar, intercepta los datos entrantes con los de la base
@@ -85,7 +112,7 @@ class UI {
     }
 
     clearSuggestions(){
-        let mapRoutes = document.getElementById("route-maps");
+        let mapRoutes = document.getElementsByTagName("route-maps");
         mapRoutes.innerHTML=``;
         let sugerencias = document.getElementById("routes-end");
         sugerencias.innerHTML = ``;
@@ -96,10 +123,15 @@ class UI {
 
     clearRouterForm() {
         document.getElementById('route-form').reset();
-
     }
 
-    renderMessages() { }
+    renderMessages(objeto, e){ 
+        const message = document.createElement('div');
+        message.innerHTML=`<p style="/* background-color: gray; */font-size: 30px;/* display: flex; *//* font-weight: bold; *//* align-self: center; *//* flex-direction: column; *//* flex-wrap: nowrap; *//* align-content: stretch; *//* justify-content: center; *//* align-items: center; */text-align: center;margin: 20px 0;">${e}</p>`;
+        objeto.appendChild(message);
+        
+        setTimeout( () => message.remove() ,2300)
+    }
 
 }
 

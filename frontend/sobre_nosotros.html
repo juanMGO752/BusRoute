@@ -209,27 +209,27 @@
             </div>
 
         </div>
-        <form class="formulario" action="" method="">
+        <form class="formulario" id="suggestion-form">
             <ul class="lista_formulario">
                 <li class="item_formulario">
-                    <label for="name"></label>
-                    <input type="text" class="input-form-footer" id="name" name="user_name" placeholder="Nombre" />
+                    <label for="user_name"></label>
+                    <input  class="input-form-footer" name="user_name" id="name" placeholder="Nombre" type="text" required />
                 </li>
                 <li class="item_formulario">
-                    <label for="mail"></label>
-                    <input type="email" class="input-form-footer" id="mail" name="user_mail" placeholder="Correo Electronico" />
+                    <label for="user_mail"></label>
+                    <input  class="input-form-footer" name="user_mail" id="mail" placeholder="Correo Electronico" type="email" required  />
                 </li>
                 <li class="item_formulario">
-                    <label for="asunto"></label>
-                    <input type="text" class="input-form-footer" id="asunto" name="user_issue" placeholder="Asunto" />
+                    <label for="user_issue"></label>
+                    <input  class="input-form-footer" name="user_issue" id="case" placeholder="Asunto" type="text" required/>
                 </li>
                 <li class="item_formulario">
-                    <label for="msg"></label>
-                    <textarea id="msg" class="input-form-footer" name="user_message" placeholder="Mensaje"></textarea>
+                    <label for="userMessage"></label>
+                    <textarea  class="input-form-footer" name="userMessage" id="userMessage" placeholder="Mensaje" required></textarea>
                 </li>
-                <button class="boton_formulario" type="submit">Envíe su mensaje</button>
-
+                
             </ul>
+            <button class="boton_formulario" type="submit">Envíe su mensaje</button>
         </form>
 
 

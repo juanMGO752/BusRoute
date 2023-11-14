@@ -1,5 +1,7 @@
 import './styles/app.css';
 import UI from './UI.JS';
+import SuggestionService from './services/SuggestionService';
+
 
 // evento de carga de dom, ejecuta las funciones al cargar loa pagina
 document.addEventListener('DOMContentLoaded',()=>{
@@ -7,14 +9,46 @@ document.addEventListener('DOMContentLoaded',()=>{
 });
 
 
-// captura el evento de envio de los puntos de ruta que el usuario necesita y pinta los mapas
-// los cuales crucen ruta con los puntos que fueron enviados
-document.getElementById('route-form')
+
+
+// captura el evento del formulario de sugerencias y envio a DB
+document.getElementById('suggestion-form')
     .addEventListener('submit',e =>{
         const ui = new UI();
-        ui.renderRoutes()
+        const nameUser = document.getElementById("name").value;
+        const emailUser = document.getElementById("mail").value;
+        const caseUser = document.getElementById("case").value;
+        const messageUser = document.getElementById("userMessage").value;
+        const suggestionForm = document.getElementById('suggestion-form');
+
+        console.log(nameUser,emailUser,caseUser,messageUser);
+        
+        const formData = new FormData();
+        formData.append('nameUser', nameUser)
+        formData.append('emailUser', emailUser)
+        formData.append('caseUser',caseUser)
+        formData.append('messageUser',messageUser)
+        
+        console.log(formData);
+
+        const suggestionService = new SuggestionService();
+        suggestionService.postSuggestion(formData)
+
         e.preventDefault();
-        ui.clearSuggestions()
+        suggestionForm.reset();
+
+        ui.renderMessages(suggestionForm,"! Tu sugerencia se envió correctamente, muchas gracias ¡");
+
+});
+
+
+// captura el evento de envio de los puntos de ruta que el usuario necesita y pinta los mapas
+// los cuales crucen ruta con los puntos que fueron enviados
+document.getElementById('route-form').addEventListener('submit',e =>{
+    const ui = new UI();
+    ui.renderRoutes()
+    e.preventDefault();
+    ui.clearSuggestions()
 })
 
 // evento que muestra los mapas de las rutas encontradas
@@ -78,4 +112,9 @@ document.getElementById("route-form").addEventListener('click', e =>{
         inputRoutesEnd.value = e.target.innerHTML
         suggestionsEnd.innerHTML= '';
     }
-})
+});
+
+document.getElementById("show-all-routes").addEventListener('click', e =>{
+    const ui = new UI();
+    ui.renderAllRoutes();
+});

@@ -5,10 +5,6 @@
     box-sizing: border-box;
 }
 
-.mamasita{
-    display: none;
-}
-
 #button-display{
     
 }
@@ -305,10 +301,6 @@ flex-wrap: wrap;
     background-image: url(../725a917f406424b0f3b9.jpg);
 }
 
-.integrantes-img-julian {
-    background-image: url(../98552e257d3b93582678.jpg);
-
-}
 
 .integrantes-img-juan {
     background-image: url(../523cabb71eb1eb39efcf.png);
@@ -386,6 +378,14 @@ width: 50%;
     border: 0.3px solid white;
     border-radius: 10px;
     color: white;
+    display: flex;
+    margin: 0 auto;
+    justify-content: center;
+}
+
+.boton_formulario:active{
+    transform: translateY(1.5px);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);  
 }
 /* Sbre Nosotros */
 
@@ -460,11 +460,24 @@ width: 50%;
     padding: 3rem 0;
 }
 
+.show-all-routes{
+    align-self: flex-start;
+    margin: 0 0 0 0.25rem;
+}
+.show-all-routes:active{
+    text-shadow: 0 5px 10px rgba(0, 0, 0, 0.2); 
+
+}
+.show-all-routes:hover{
+    cursor: pointer;
+}
+
 .container-form-route{
     display: flex;
     justify-content: center;
     background-color: #fafafa;
     padding: 3rem 0;
+    flex-direction: column;
 }
 .form-route{
     padding: 2.5rem;
@@ -473,6 +486,7 @@ width: 50%;
     align-items: center;
     position: relative;
     max-width:550px ;
+    margin: 0 auto;
     
 }
 .container-card{
@@ -524,6 +538,16 @@ top: 109px;
     align-self: flex-start;
 }
 
+.button-all-routes{
+    display: flex;
+    margin: 0 auto;
+}
+
+.button-form:active{
+    transform: translateY(1.5px);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
 .route-buttons-container{
     display: flex;
     justify-content: normal;
@@ -542,7 +566,13 @@ top: 109px;
     font-size: 25px;
     color: #fafafa;
     padding: 1rem;
+    text-shadow: 0 5px 10px rgba(0, 0, 0, 0.2); 
+    
 
+}
+
+.view:active{
+    text-shadow: 7px 7px 10px rgb(0 0 0);
 }
 
 .container-map{
@@ -575,24 +605,7 @@ top: 109px;
 
 /* Animacion de las pagina sobre nosotros */
 
-.animacion-left {
-    animation-duration: 3s;
-    animation-name: slidein;
-    animation-iteration-count: 1;
-}
 
-@keyframes slidein {
-    from {
-        margin-left: 100%;
-        width: 100%;
-    }
-
-    to {
-        margin-left: 2.50rem;
-        width: 100%;
-    }
-
-}
 
 @keyframes adjust-header {
     to {

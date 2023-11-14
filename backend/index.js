@@ -43,7 +43,8 @@ app.use(cors());
 
 
 // Routes
-app.use('/api/routes',require('./routes/routes.js')); //api creada con una url
+app.use('/api/routes',require('./routes/routes.js')); //api creada con una url para las rutas de los buses
+app.use('/api/suggestions',require('./routes/suggestions.js')); //api creada con una url para las sugerencias
 
 // Static files
 // en la carpeta "publi" es donde deben de ir todo lo que se puede mostar como el html, css, javascript o fotos
