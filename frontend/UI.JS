@@ -21,8 +21,7 @@ class UI {
                 const newButton = document.createElement('div');
                 newButton.className = 'container-button'
                 newButton.innerHTML = `
-                    <a href="#" class="view" _id="${route._id}">${route.company} (${route.tittleRoute})</a>
-                    `
+                    <a class="view" _id="${route._id}">${route.company} (${route.tittleRoute})</a>`
                 containerNewButtons.appendChild(newButton);
             };
 
